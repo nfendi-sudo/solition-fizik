@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #1e3a8a; --accent: #dc2626; --success: #059669; --bg: #f8fafc; }
+        body { font-family: 'Cairo', sans-serif; background-color: var(--bg); padding: 20px; color: #1e293b; }
+        .solution-container { max-width: 900px; margin: auto; background: white; padding: 40px; border-radius: 12px; border: 2px solid var(--primary); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .header { text-align: center; border-bottom: 3px double var(--primary); margin-bottom: 30px; padding-bottom: 10px; }
+        .section-title { background: var(--primary); color: white; padding: 8px 20px; border-radius: 5px; margin-top: 30px; font-weight: 900; }
+        .answer-box { border-right: 4px solid var(--success); background: #f0fdf4; padding: 15px; margin: 15px 0; }
+        .grading { float: left; color: var(--accent); font-weight: 900; background: #fee2e2; padding: 2px 10px; border-radius: 15px; font-size: 0.9em; }
+        .math-res { direction: ltr; text-align: left; font-family: 'Times New Roman', serif; color: #1e40af; font-size: 1.2rem; padding: 10px; }
+        .note { font-size: 0.9em; color: #64748b; font-style: italic; }
+        .footer { text-align: center; margin-top: 40px; font-weight: bold; color: var(--primary); }
+        @media print { .no-print { display: none; } }
+    </style>
+</head>
+<body>
+
+<div class="solution-container">
+    <div class="header">
+        <h1>الإجابة النموذجية وسلّم التنقيط</h1>
+        <p>وحدة الظواهر الميكانيكية: حركة القذيفة</p>
+    </div>
+
+    <div class="section-title">1. الرسم التخطيطي</div>
+    <div class="answer-box">
+        <span class="grading">02 ن</span>
+        <ul>
+            <li>تمثيل المحاور \( Ox \) (أفقي) و \( Oy \) (شاقولي نحو الأعلى). (0.5 ن)</li>
+            <li>تمثيل شعاع السرعة \( \vec{v}_0 \) يصنع زاوية \( \alpha \) مع الأفق. (0.75 ن)</li>
+            <li>تمثيل شعاع التسارع \( \vec{g} \) شاقولي ومتجه نحو الأسفل. (0.75 ن)</li>
+        </ul>
+        
+    </div>
+
+    <div class="section-title">2. عبارة شعاع التسارع \( \vec{a} \)</div>
+    <div class="answer-box">
+        <span class="grading">03 ن</span>
+        الجملة: (الكرة)، المرجع: (سطحي أرضي غاليلي). بتطبيق القانون الثاني لنيوتن: \( \sum \vec{F}_{ext} = m \vec{a} \)<br>
+        باعتبار القوة الوحيدة هي الثقل: \( \vec{P} = m \vec{a} \) أي \( m \vec{g} = m \vec{a} \implies \vec{a} = \vec{g} \).<br>
+        بالإسقاط على المحاور:
+        <div class="math-res">
+            $$ \begin{cases} a_x = 0 \\ a_y = -g \end{cases} $$
+        </div>
+        <span class="note">(1.5 ن للاستنتاج و 1.5 ن للإحداثيات)</span>
+    </div>
+
+    <div class="section-title">3. المعادلات الزمنية للسرعة</div>
+    <div class="answer-box">
+        <span class="grading">03 ن</span>
+        بالتكامل وباعتبار الشروط الابتدائية: \( v_{0x} = v_0 \cos\alpha \) و \( v_{0y} = v_0 \sin\alpha \)
+        <div class="math-res">
+            $$ \begin{cases} v_x(t) = v_0 \cos\alpha \\ v_y(t) = -gt + v_0 \sin\alpha \end{cases} $$
+        </div>
+    </div>
+
+    <div class="section-title">4. المعادلات الزمنية للحركة ومعادلة المسار</div>
+    <div class="answer-box">
+        <span class="grading">04 ن</span>
+        بالتكامل مرة أخرى (المبدأ هو نقطة القذف \( x_0=0, y_0=0 \)):
+        <div class="math-res">
+            $$ \begin{cases} x(t) = (v_0 \cos\alpha) t \\ y(t) = -\frac{1}{2}gt^2 + (v_0 \sin\alpha) t \end{cases} $$
+        </div>
+        باستخراج \( t \) من معادلة \( x \) وتعويضها في \( y \)، نجد معادلة المسار:
+        <div class="math-res">
+            $$ y(x) = -\frac{g}{2v_0^2 \cos^2\alpha}x^2 + (\tan\alpha)x $$
+        </div>
+    </div>
+
+    <div class="section-title">5. لحظة الوصول إلى الذروة \( t_S \)</div>
+    <div class="answer-box">
+        <span class="grading">02 ن</span>
+        شرط الذروة هو انعدام المركبة الشاقولية للسرعة: \( v_y(t_S) = 0 \).<br>
+        \( -gt_S + v_0 \sin\alpha = 0 \implies t_S = \frac{v_0 \sin\alpha}{g} \)<br>
+        تطبيق عددي: \( t_S = \frac{12 \times \sin(45^\circ)}{9.8} \approx 0.86 \, s \)
+    </div>
+
+    <div class="section-title">6. حساب المدى \( x_P \)</div>
+    <div class="answer-box">
+        <span class="grading">03 ن</span>
+        عند المدى يكون \( y = 0 \). من معادلة المسار: \( x [-\frac{g}{2v_0^2 \cos^2\alpha}x + \tan\alpha] = 0 \)<br>
+        الحل غير المعدوم: \( x_P = \frac{v_0^2 \sin(2\alpha)}{g} \)<br>
+        تطبيق عددي: \( x_P = \frac{12^2 \times \sin(90^\circ)}{9.8} = \frac{144}{9.8} \approx 14.69 \, m \)
+    </div>
+
+    <div class="section-title">7. التفكير الاستنتاجي</div>
+    <div class="answer-box">
+        <span class="grading">03 ن</span>
+        <strong>المركبة الأفقية للسرعة \( v_x \) ثابتة (لا تتغير).</strong> (1 ن)<br>
+        <strong>التعليل:</strong> بما أن التسارع الأفقي معدوم \( a_x = 0 \)، فإن الحركة وفق المحور \( Ox \) منتظمة (الحركة التي يكون تسارعها معدوماً تكون سرعتها ثابتة). (2 ن)
+    </div>
+
+    <div class="footer">
+        مجموع النقاط: 20/20 <br>
+        <button class="no-print" onclick="window.print()" style="margin-top:20px; padding:10px 20px; cursor:pointer;">طباعة تقرير التصحيح</button>
+    </div>
+</div>
+
+</body>
+</html>
